@@ -103,7 +103,7 @@ export function Checkbox({
       }}
       className={cn(
         'inline-flex size-4 shrink-0 items-center justify-center rounded-[4px] transition-colors duration-100',
-        on ? 'bg-accent text-[#140a05]' : 'shadow-[inset_0_0_0_1.5px_rgba(255,255,255,0.22)] hover:shadow-[inset_0_0_0_1.5px_rgba(255,255,255,0.4)]',
+        on ? 'bg-accent text-white' : 'shadow-[inset_0_0_0_1.5px_rgba(255,255,255,0.22)] hover:shadow-[inset_0_0_0_1.5px_rgba(255,255,255,0.4)]',
         className,
       )}
     >

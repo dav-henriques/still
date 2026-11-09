@@ -29,7 +29,7 @@ Read `docs/ARCHITECTURE.md` before changing storage, rendering or the queue.
 - Child processes: `spawn` with argument arrays, `shell: false`. Never interpolate user input into a command or script.
 - Filesystem: build paths with `safeJoin`; write JSON with `writeJsonAtomic`; mutate projects only through `ProjectStore.update` (locked, validated, emits an event, GCs artwork).
 - Imports in server/shared use explicit `.ts` extensions.
-- UI: TanStack Query for server state (write returned `Project`s with `setProject`), Zustand for UI-only state. Use the components in `components/ui` and tokens from `styles/index.css`; follow `docs/DESIGN_SYSTEM.md` (orange sparingly, tabular numerals for numbers, Lucide icons at 1.75 stroke).
+- UI: TanStack Query for server state (write returned `Project`s with `setProject`), Zustand for UI-only state. Use the components in `components/ui` and tokens from `styles/index.css`; follow `docs/DESIGN_SYSTEM.md` (red accent sparingly, tabular numerals for numbers, Lucide icons at 1.75 stroke).
 - Every icon-only control needs an accessible label; use real `<button>`s.
 - Keep comments to the *why*. Mark deliberate shortcuts as `shortcut: <limit>, <when to upgrade>`.
 

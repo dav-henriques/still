@@ -14,13 +14,13 @@ Quiet, precise, desktop-native. Quality comes from type, spacing and restraint �
 | `fg` | `#F5F5F5` | Primary text |
 | `fg-2` | `#929292` | Secondary text, icons |
 | `fg-3` | `#626262` | Muted text, hints, column headers |
-| `accent` | `#FF7545` | Primary action, playback progress, selection, “needs artwork” |
+| `accent` | `#A21A23` | Primary action, playback progress, selection, “needs artwork” |
 | `accent-soft` | 12 % accent | Selected rows, notices |
 | `line` / `line-2` | white 8 % / 13 % | Hairlines, input outlines |
 | `danger` | `#F0605A` | Errors, destructive actions |
 | `ok` | `#7FBF95` | Small “ready / exported” marks only |
 
-Rules: orange is for one primary action per view, progress, focus, and small indicators — never panel backgrounds. Text on orange is near-black (`#140a05`) for contrast. Surfaces are separated by tone and 1 px inset hairlines (`shadow-[inset_0_0_0_1px_var(--color-line)]`), not heavy borders.
+Rules: the red accent is for one primary action per view, progress, focus, and small indicators — never panel backgrounds. Text on the accent is white for contrast. Surfaces are separated by tone and 1 px inset hairlines (`shadow-[inset_0_0_0_1px_var(--color-line)]`), not heavy borders.
 
 ## Type
 

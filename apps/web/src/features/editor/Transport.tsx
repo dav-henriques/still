@@ -211,7 +211,7 @@ function Waveform({
     });
     for (const [canvas, color] of [
       [base.current, 'rgba(255,255,255,0.2)'],
-      [played.current, '#ff7545'],
+      [played.current, getComputedStyle(document.documentElement).getPropertyValue('--color-accent').trim()],
     ] as const) {
       if (!canvas) continue;
       canvas.width = width * dpr;
