@@ -4,6 +4,7 @@ import path from 'node:path';
 import { createApp, createServices } from './app.ts';
 import os from 'node:os';
 import { HOST, LAN, PORT } from './config.ts';
+import { isPrivateIPv4 } from './middleware/security.ts';
 
 const serveWeb = process.argv.includes('--serve-web');
 const shouldOpen = process.argv.includes('--open');
@@ -20,7 +21,7 @@ const server = app.listen(PORT, HOST, () => {
     // Private IPv4 addresses other computers at home can use.
     const ips = Object.values(os.networkInterfaces())
       .flat()
-      .filter((i) => i && i.family === 'IPv4' && !i.internal)
+      .filter((i) => i && i.family === 'IPv4' && isPrivateIPv4(i.address))
       .map((i) => i!.address);
     for (const ip of ips) console.log(`  network  http://${ip}:${PORT}`);
     console.log('  LAN mode: anyone on this network can open still — there is no login.');
